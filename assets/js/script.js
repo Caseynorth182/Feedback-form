@@ -17,14 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
             let xhr = new XMLHttpRequest();
             xhr.addEventListener('readystatechange', function (){
-                if(this.readyState === 4 && this.status === 200){
+                if(this.readyState === 4 && this.status === 200) {
                     console.log(this.responseText);
                     toast.classList.add('show');
                     toast_body.innerHTML = 'Ваше письмо отправлено';
-                } else {
-                    toast_body.innerHTML = 'Запослните все поля';
-                    return false;
                 }
+
             })
             let form_data = new FormData(form);
             xhr.open('POST','./send.php');

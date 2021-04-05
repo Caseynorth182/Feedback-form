@@ -1,5 +1,6 @@
 <?php
 require_once 'vendor/DB.php';
+require_once 'send.php';
 echo '<pre>';
 
 echo '</pre>';
